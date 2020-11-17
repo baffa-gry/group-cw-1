@@ -7,9 +7,16 @@
     </head>
     <body>
         <div id="app">
-            <div class="card">
-
-            </div>
+            <div class="card" style="width:400px">
+                <img class="card-img-top" v-bind:src="product.img">
+                <div class="card-body">
+                  <h4 class="card-title">{{product.title}}</h4>
+                  <p class="card-text">Price: {{product.price}}</p>
+                  <p class="card-text">Location: {{product.location}}</p>
+                  <p class="card-text">Available: {{product.availableInventory}}</p>
+                  <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+              </div>
 
         </div>
 
@@ -17,7 +24,14 @@
             let app = new Vue({
                 el: '#app',
                 data:{
-
+                    product: {
+                        id: "1001",
+                        title: "Math",
+                        location: "London",
+                        price: "100",
+                        availableInventory: 5,
+                        img: "https://miro.medium.com/max/1400/1*L76A5gL6176UbMgn7q4Ybg.jpeg"
+                    },
                 },
                 methods:{
 
